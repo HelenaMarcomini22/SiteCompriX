@@ -81,9 +81,7 @@ Durante o desenvolvimento deste projeto, aprimorei:
 📬 Contato
 
 <p align="center"> <a href="https://github.com/HelenaMarcomini22"> <img src="https://img.shields.io/badge/GitHub-HelenaMarcomini22-30b36c?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Helena"> </a> 
-
 <a href="https://www.linkedin.com/in/helena-marcomini-21707b145/"> <img src="https://img.shields.io/badge/LinkedIn-Helena%20Marcomini-0077b5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Helena"> </a> 
-
 <a href="mailto:helenarfmarcomini@gmail.com"> <img src="https://img.shields.io/badge/Email-helenarfmarcomini@gmail.com-d14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Helena"> </a> </p>
 
 <p align="center"> Feito com 💚 por <strong>Helena Marcomini</strong> • Desenvolvedora apaixonada por tecnologia</p>
