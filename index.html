@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CompriX - Seu Supermercado Online</title>
+  <link rel="stylesheet" href="./style/style.css" />
+</head>
+<body>
+
+  <div id="menu-placeholder"></div>
+
+
+    <main class="container">
+        <section id="home" class="content-section active">
+            <div class="welcome-banner">
+                <h2>Bem-vindo ao COMPRIX</h2>
+                <p class="subtitle">Seu supermercado online com produtos frescos e de qualidade</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛒</div>
+                    <h3>Compras Fáceis</h3>
+                    <p>Interface intuitiva para suas compras online</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚚</div>
+                    <h3>Entrega Rápida</h3>
+                    <p>Entregamos na porta da sua casa</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💳</div>
+                    <h3>Pagamento Seguro</h3>
+                    <p>Diversas opções de pagamento</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="produtos" class="content-section">
+            <h2>Nossos Produtos</h2>
+            <div class="products-showcase">
+                <div class="product-category">
+                    <div class="category-icon">🍎</div>
+                    <h3>Frutas & Verduras</h3>
+                    <p>Produtos frescos selecionados diariamente</p>
+                </div>
+                <div class="product-category">
+                    <div class="category-icon">🥛</div>
+                    <h3>Laticínios</h3>
+                    <p>Leite, queijos e iogurtes das melhores marcas</p>
+                </div>
+                <div class="product-category">
+                    <div class="category-icon">🍞</div>
+                    <h3>Padaria</h3>
+                    <p>Pães frescos e produtos de confeitaria</p>
+                </div>
+                <div class="product-category">
+                    <div class="category-icon">🧴</div>
+                    <h3>Limpeza</h3>
+                    <p>Produtos de limpeza e higiene</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="ofertas" class="content-section">
+            <h2>Ofertas Especiais</h2>
+            <p>Aproveite nossas ofertas imperdíveis! Produtos com até 50% de desconto e promoções exclusivas para clientes cadastrados.</p>
+            <p>Fique atento às nossas ofertas semanais e economize ainda mais nas suas compras.</p>
+        </section>
+
+        <section id="contato" class="content-section">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para mais informações, sugestões ou dúvidas sobre nossos produtos e serviços.</p>
+            <p><strong>Telefone:</strong> (11) 1234-5678<br>
+            <strong>WhatsApp:</strong> (11) 98765-4321<br>
+            <strong>Email:</strong> contato@comprix.com.br</p>
+        </section>
+
+        <section id="sobre" class="content-section">
+            <h2>Sobre Nós</h2>
+            <p>O CompriX nasceu com o objetivo de levar qualidade e praticidade para a mesa das famílias brasileiras.</p>
+            <p>Com mais de 10 anos de experiência no mercado, oferecemos produtos selecionados, atendimento personalizado e entrega rápida em toda a região metropolitana.</p>
+        </section>
+
+        <section id="carrinho" class="content-section">
+            <h2>Carrinho de Compras</h2>
+            <p>Veja os itens que você adicionou ao seu carrinho:</p>
+            <ul class="cart-items">
+                <li>
+                    <span>Maçã Argentina (1kg)</span>
+                    <span><strong>R$ 8,99</strong></span>
+                </li>
+                <li>
+                    <span>Leite Integral (1L)</span>
+                    <span><strong>R$ 4,50</strong></span>
+                </li>
+                <li>
+                    <span>Pão de Forma Integral</span>
+                    <span><strong>R$ 6,99</strong></span>
+                </li>
+            </ul>
+            <div class="cart-total">
+                Total: R$ 20,48
+            </div>
+            <button class="btn-checkout">Finalizar Compra</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 COMPRIX Online Supermarket. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script>
+         fetch("./components/menu.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("menu-placeholder").innerHTML = data;
+
+      // Inicializa o tema AQUI, após carregar o menu:
+      const themeToggle = document.getElementById("toggle-theme");
+      const body = document.body;
+
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        body.classList.add("dark-mode");
+        if (themeToggle) themeToggle.textContent = "☀️";
+      } else {
+        if (themeToggle) themeToggle.textContent = "🌙";
+      }
+
+      themeToggle?.addEventListener("click", () => {
+        const isDark = body.classList.toggle("dark-mode");
+        localStorage.setItem("theme", isDark ? "dark" : "light");
+        themeToggle.textContent = isDark ? "☀️" : "🌙";
+      });
+    });
+    </script>
+</body>
+</html>
